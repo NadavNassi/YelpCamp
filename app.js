@@ -15,13 +15,19 @@ const commentRoutes = require("./routes/comments"),
 	  campgroundRouts = require("./routes/campgrounds"),
 	  indexRoutes = require("./routes/index");
 
-mongoose.connect("mongodb://localhost/yelp_camp_v12", {
+// mongoose.connect("mongodb://localhost/yelp_camp_v12", {
+// 	useNewUrlParser: true,
+// 	useUnifiedTopology: true
+// })
+// .then(() => console.log("connected to db"))
+// .catch(error => console.log(error.message));
+// seedDB(); seed the database
+mongoose.connect("mongodb+srv://nadavDB:Bgtbgt91@cluster0.s3tzs.mongodb.net/<dbname>?retryWrites=true&w=majority", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 })
 .then(() => console.log("connected to db"))
 .catch(error => console.log(error.message));
-// seedDB(); seed the database
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
