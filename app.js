@@ -57,7 +57,7 @@ app.use(function(req, res, next){
 });
 
 
-//REQUIRING ROUTES
+//SETING UP ROUTES
 app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRouts);
 app.use("/campgrounds/:id/comments", commentRoutes);
